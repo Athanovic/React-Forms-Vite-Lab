@@ -1,6 +1,6 @@
-function Filter({ search, onSearchChange }) {
+function SearchBar({ search, onSearchChange }) {
   return (
-    <div>
+    <div className="searchbar">
       <input
         type="text"
         placeholder="Search..."
@@ -11,4 +11,4 @@ function Filter({ search, onSearchChange }) {
   );
 }
 
-export default Filter;
+export default SearchBar;
