@@ -1,11 +1,10 @@
+import Item from "./Item";
+
 function ItemList({ items }) {
   return (
-    <ul>
-      {items.map((item) => (
-        <li key={item.id}>
-          <span>{item.name}</span>
-          <span>{item.category}</span>
-        </li>
+    <ul className="Items">
+      {items && items.map((item, index) => (
+        <Item key={index} name={item.name} category={item.category} />
       ))}
     </ul>
   );

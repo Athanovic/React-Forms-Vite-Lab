@@ -3,7 +3,7 @@ import Filter from "./Filter";
 import ItemForm from "./ItemForm";
 import ItemList from "./ItemList";
 
-function ShoppingList({ items: initialItems }) {
+function ShoppingList({ items: initialItems = [] }) {
   const [search, setSearch] = useState("");
   const [items, setItems] = useState(initialItems);
 
@@ -23,8 +23,8 @@ function ShoppingList({ items: initialItems }) {
 
   return (
     <div className="ShoppingList">
-      <Filter search={search} onSearchChange={handleSearchChange} />
       <ItemForm onItemFormSubmit={handleItemFormSubmit} />
+      <Filter search={search} onSearchChange={handleSearchChange} />
       <ItemList items={itemsToDisplay} />
     </div>
   );
