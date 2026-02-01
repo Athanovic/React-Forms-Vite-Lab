@@ -1,13 +1,10 @@
-import Item from "./Item";
-
-function ItemList({ items }) {
+function Item({ name, category }) {
   return (
-    <ul className="Items">
-      {items.map((item, index) => (
-        <Item key={index} name={item.name} category={item.category} />
-      ))}
-    </ul>
+    <li className={category}>
+      <span>{name}</span>
+      <span className="category">{category}</span>
+    </li>
   );
 }
 
-export default ItemList;
+export default Item;
